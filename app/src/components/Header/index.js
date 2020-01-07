@@ -18,12 +18,16 @@ export default class Header extends React.Component{
 
   }
   onSelect = (opt) => {
-    console.log(opt)
-    console.log(opt.props.value);
     this.setState({
       visible: false,
       selected: opt.props.value,
       theme:opt.props.value,
+    });
+  }
+  handleVisibleChange = (visible) => {
+    console.log(visible)
+    this.setState({
+      visible,
     });
   }
   render(){
@@ -53,16 +57,14 @@ export default class Header extends React.Component{
               onSelect={this.onSelect}
             >
               <div style={{
-                height: '100%',
-                padding: '0',
-                marginRight: '-15px',
-                display: 'flex',
-                alignItems: 'center',
-              }}
+                    height: '100%',
+                    padding: '0',
+                    marginRight: '-15px',
+                    display: 'flex',
+                    alignItems: 'center',
+                  }}
               >
-                <span className='iconfont icon-yanse' 
-               
-                style={colorBtnSty} />
+                <span className='iconfont icon-yanse' style={colorBtnSty} />
               </div>
             </Popover>
         ]}
