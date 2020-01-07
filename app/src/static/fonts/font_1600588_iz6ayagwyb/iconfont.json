@@ -1,0 +1,135 @@
+{
+  "id": "1600588",
+  "name": "jcstu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "496397",
+      "name": "笔记本",
+      "font_class": "bijiben",
+      "unicode": "e6ba",
+      "unicode_decimal": 59066
+    },
+    {
+      "icon_id": "648779",
+      "name": "人群",
+      "font_class": "renqun",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "680987",
+      "name": "书",
+      "font_class": "shu",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "688059",
+      "name": "播放 三角形",
+      "font_class": "bofangsanjiaoxing",
+      "unicode": "e769",
+      "unicode_decimal": 59241
+    },
+    {
+      "icon_id": "689241",
+      "name": "个人 用户 头像2",
+      "font_class": "gerenyonghutouxiang2",
+      "unicode": "e7e5",
+      "unicode_decimal": 59365
+    },
+    {
+      "icon_id": "1127384",
+      "name": "书",
+      "font_class": "book",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "1484888",
+      "name": "lock",
+      "font_class": "lock",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "4029831",
+      "name": "set",
+      "font_class": "set",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "4298038",
+      "name": "消息off",
+      "font_class": "xiaoxioff",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "4329394",
+      "name": "直播管理",
+      "font_class": "zhiboguanli",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "4657693",
+      "name": "注意",
+      "font_class": "zhuyi-",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "5327376",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "6310686",
+      "name": "签到",
+      "font_class": "qiandao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7674895",
+      "name": "记录",
+      "font_class": "lianluojilu",
+      "unicode": "e717",
+      "unicode_decimal": 59159
+    },
+    {
+      "icon_id": "7699679",
+      "name": "16消息",
+      "font_class": "xiaoxi",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "9318574",
+      "name": "颜色",
+      "font_class": "yanse",
+      "unicode": "e822",
+      "unicode_decimal": 59426
+    },
+    {
+      "icon_id": "10156391",
+      "name": "个人",
+      "font_class": "geren",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "11125636",
+      "name": "直播",
+      "font_class": "15",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    }
+  ]
+}

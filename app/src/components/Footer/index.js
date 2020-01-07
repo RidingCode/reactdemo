@@ -7,43 +7,47 @@ export default class Footer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'redTab',
+      selectedTab: 'HomeTab',
       hidden: false,
-      fullScreen: false,
+      fullScreen: true,
     };
   }
 
-  renderContent(pageText) {
-    return (
-      <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-        <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-              hidden: !this.state.hidden,
-            });
-          }}
-        >
-          Click to show/hide tab-bar
-        </a>
-        <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-              fullScreen: !this.state.fullScreen,
-            });
-          }}
-        >
-          Click to switch fullscreen
-        </a>
-      </div>
-    );
-  }
+  // renderContent(pageText) {
+  //   return (
+  //     <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
+  //       <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
+  //       <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
+  //         onClick={(e) => {
+  //           e.preventDefault();
+  //           this.setState({
+  //             hidden: !this.state.hidden,
+  //           });
+  //         }}
+  //       >
+  //         Click to show/hide tab-bar
+  //       </a>
+  //       <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
+  //         onClick={(e) => {
+  //           e.preventDefault();
+  //           this.setState({
+  //             fullScreen: !this.state.fullScreen,
+  //           });
+  //         }}
+  //       >
+  //         Click to switch fullscreen
+  //       </a>
+  //     </div>
+  //   );
+  // }
 
   render() {
+    const homeSpan = <span className="iconfont icon-zhiboguanli" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
+    const courseSpan = <span className="iconfont icon-book" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
+    const listSpan = <span className="iconfont icon-bofang" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
+    const mySpan = <span className="iconfont  icon-gerenyonghutouxiang2" style={{width: '22px', height: '22px',fontSize: '22px'}} /> 
     return (
-      <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: 400 }}>
+      <div style={this.state.fullScreen ? { position: 'fixed', height: 'calc(100% - 45px)', width: '100%', top: '45px' } : { height: 400 }}>
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -51,105 +55,65 @@ export default class Footer extends React.Component {
           hidden={this.state.hidden}
         >
           <TabBar.Item
-            title="Life"
-            key="Life"
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
-            }}
-            />
-            }
-            selected={this.state.selectedTab === 'blueTab'}
-            badge={1}
+            title="直播大厅"
+            key="Home"
+            icon={homeSpan}
+            selectedIcon={homeSpan}
+            selected={this.state.selectedTab === 'HomeTab'}
+            badge={''}
             onPress={() => {
               this.setState({
-                selectedTab: 'blueTab',
+                selectedTab: 'HomeTab',
               });
             }}
             data-seed="logId"
           >
-            {this.renderContent('Life')}
+            {/* {this.renderContent('Home')} */}
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            title="Koubei"
-            key="Koubei"
-            badge={'new'}
-            selected={this.state.selectedTab === 'redTab'}
+            icon={courseSpan}
+            selectedIcon={courseSpan}
+            title="我的课程"
+            key="Course"
+            badge={''}
+            selected={this.state.selectedTab === 'CourseTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'redTab',
+                selectedTab: 'CourseTab',
               });
             }}
             data-seed="logId1"
           >
-            {this.renderContent('Koubei')}
+            {/* {this.renderContent('Course')} */}
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat'
-              }}
-              />
-            }
-            title="Friend"
-            key="Friend"
-            dot
-            selected={this.state.selectedTab === 'greenTab'}
+            icon={listSpan}
+            selectedIcon={listSpan}
+            title="播放列表"
+            key="List"
+            badge={''}
+            selected={this.state.selectedTab === 'ListTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'greenTab',
+                selectedTab: 'ListTab',
               });
             }}
           >
-            {this.renderContent('Friend')}
+            {/* {this.renderContent('List')} */}
           </TabBar.Item>
           <TabBar.Item
-            icon={{ uri: 'https://zos.alipayobjects.com/rmsportal/asJMfBrNqpMMlVpeInPQ.svg' }}
-            selectedIcon={{ uri: 'https://zos.alipayobjects.com/rmsportal/gjpzzcrPMkhfEqgbYvmN.svg' }}
-            title="My"
-            key="my"
-            selected={this.state.selectedTab === 'yellowTab'}
+            icon={mySpan}
+            selectedIcon={ mySpan}
+            title="个人中心"
+            key="My"
+            selected={this.state.selectedTab === 'MyTab'}
             onPress={() => {
               this.setState({
-                selectedTab: 'yellowTab',
+                selectedTab: 'MyTab',
               });
             }}
           >
-            {this.renderContent('My')}
+            {/* {this.renderContent('my')} */}
           </TabBar.Item>
         </TabBar>
       </div>
