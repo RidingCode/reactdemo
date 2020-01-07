@@ -25,7 +25,6 @@ export default class Header extends React.Component{
     });
   }
   handleVisibleChange = (visible) => {
-    console.log(visible)
     this.setState({
       visible,
     });
