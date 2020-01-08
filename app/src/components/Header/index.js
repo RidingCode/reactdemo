@@ -37,7 +37,7 @@ export default class Header extends React.Component{
         icon={<span className='logoSpan'>Logo Name</span>}
         onLeftClick={() => console.log('onLeftClick')}
         rightContent={[
-          <p key='0' className='username' style={{padding:'0 20px'}}>姓名</p>,
+          <p key='0' className='username' style={{margin:'0 10px'}}>姓名</p>,
           <Popover  key='1' mask
               overlayClassName="fortest"
               overlayStyle={{ color: 'currentColor' }}
