@@ -68,7 +68,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId"
           >
-            {/* {this.renderContent('Home')} */}
+            {/* {this.renderContent('Home')} */}直播大厅
           </TabBar.Item>
           <TabBar.Item
             icon={courseSpan}
@@ -84,7 +84,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId1"
           >
-            {/* {this.renderContent('Course')} */}
+            {/* {this.renderContent('Course')} */}我的课程
           </TabBar.Item>
           <TabBar.Item
             icon={listSpan}
@@ -99,7 +99,7 @@ export default class Footer extends React.Component {
               });
             }}
           >
-            {/* {this.renderContent('List')} */}
+            {/* {this.renderContent('List')} */}播放列表
           </TabBar.Item>
           <TabBar.Item
             icon={mySpan}
@@ -113,7 +113,7 @@ export default class Footer extends React.Component {
               });
             }}
           >
-            {/* {this.renderContent('my')} */}
+            {/* {this.renderContent('my')} */}个人中心
           </TabBar.Item>
         </TabBar>
       </div>
