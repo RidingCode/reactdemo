@@ -17,34 +17,6 @@ export default class Footer extends React.Component {
     };
   }
 
-  // renderContent(pageText) {
-  //   return (
-  //     <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-  //       <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-  //       <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-  //         onClick={(e) => {
-  //           e.preventDefault();
-  //           this.setState({
-  //             hidden: !this.state.hidden,
-  //           });
-  //         }}
-  //       >
-  //         Click to show/hide tab-bar
-  //       </a>
-  //       <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-  //         onClick={(e) => {
-  //           e.preventDefault();
-  //           this.setState({
-  //             fullScreen: !this.state.fullScreen,
-  //           });
-  //         }}
-  //       >
-  //         Click to switch fullscreen
-  //       </a>
-  //     </div>
-  //   );
-  // }
-
   render() {
     const homeSpan = <span className="iconfont icon-zhiboguanli" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
     const courseSpan = <span className="iconfont icon-book" style={{width: '22px',height: '22px',fontSize: '22px'}}/>

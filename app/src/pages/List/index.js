@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link,Route,HashRouter as Router } from 'react-router-dom'
 export default class List extends React.Component {
   constructor(props){
     super(props)
@@ -8,7 +8,10 @@ export default class List extends React.Component {
 
   render(){
     return (
-      <div>List</div>
+      <div>
+        List
+        
+      </div>
     )
   }
 }
