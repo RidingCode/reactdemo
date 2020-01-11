@@ -1,7 +1,11 @@
 import React from 'react'
+import Home from '../../pages/Home'
+import List from '../../pages/List'
+import My from '../../pages/My'
 import { TabBar } from 'antd-mobile'
 import 'antd-mobile/dist/antd-mobile.css'
 import './index.scss'
+
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -68,7 +72,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId"
           >
-            {/* {this.renderContent('Home')} */}直播大厅
+            <Home />
           </TabBar.Item>
           <TabBar.Item
             icon={courseSpan}
@@ -84,7 +88,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId1"
           >
-            {/* {this.renderContent('Course')} */}我的课程
+            <List />
           </TabBar.Item>
           <TabBar.Item
             icon={listSpan}
@@ -113,7 +117,7 @@ export default class Footer extends React.Component {
               });
             }}
           >
-            {/* {this.renderContent('my')} */}个人中心
+            <My />
           </TabBar.Item>
         </TabBar>
       </div>
