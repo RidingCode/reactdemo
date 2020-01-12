@@ -2,7 +2,7 @@ import React from 'react'
 import Home from '../../pages/Home'
 import List from '../../pages/List'
 import My from '../../pages/My'
-import { TabBar } from 'antd-mobile'
+import { TabBar,Toast } from 'antd-mobile'
 import 'antd-mobile/dist/antd-mobile.css'
 import './index.scss'
 
@@ -16,7 +16,9 @@ export default class Footer extends React.Component {
       fullScreen: true,
     };
   }
-
+  componentDidMount(){
+    Toast.success('登录成功！')
+  }
   render() {
     const homeSpan = <span className="iconfont icon-zhiboguanli" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
     const courseSpan = <span className="iconfont icon-book" style={{width: '22px',height: '22px',fontSize: '22px'}}/>

@@ -13,6 +13,7 @@ export default class My extends React.Component {
   render(){
     return (
       <div>My
+        <WhiteSpace />
         <List>
           <InputItem
             clear
