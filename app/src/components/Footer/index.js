@@ -2,7 +2,7 @@ import React from 'react'
 import Home from '../../pages/Home'
 import List from '../../pages/List'
 import My from '../../pages/My'
-import { TabBar,Toast } from 'antd-mobile'
+import { TabBar} from 'antd-mobile'
 import 'antd-mobile/dist/antd-mobile.css'
 import './index.scss'
 
@@ -16,14 +16,12 @@ export default class Footer extends React.Component {
       fullScreen: true,
     };
   }
-  componentDidMount(){
-    Toast.success('登录成功！')
-  }
+
   render() {
-    const homeSpan = <span className="iconfont icon-zhiboguanli" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
-    const courseSpan = <span className="iconfont icon-book" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
-    const listSpan = <span className="iconfont icon-bofang" style={{width: '22px',height: '22px',fontSize: '22px'}}/>
-    const mySpan = <span className="iconfont  icon-gerenyonghutouxiang2" style={{width: '22px', height: '22px',fontSize: '22px'}} /> 
+    const homeSpan = <span className="iconfont icon-zhiboguanli" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
+    const courseSpan = <span className="iconfont icon-book" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
+    const listSpan = <span className="iconfont icon-bofang" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
+    const mySpan = <span className="iconfont  icon-gerenyonghutouxiang2" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: 'calc(100% - 45px)', width: '100%', top: '45px' } : { height: 400 }}>
         <TabBar
@@ -81,7 +79,7 @@ export default class Footer extends React.Component {
           </TabBar.Item>
           <TabBar.Item
             icon={mySpan}
-            selectedIcon={ mySpan}
+            selectedIcon={mySpan}
             title="个人中心"
             key="My"
             selected={this.state.selectedTab === 'MyTab'}
