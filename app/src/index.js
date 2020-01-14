@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './axios/api'
+import './store'
 import './common'
 import './axios'
 import './index.scss';

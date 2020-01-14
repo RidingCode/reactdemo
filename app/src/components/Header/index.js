@@ -13,9 +13,11 @@ export default class Header extends React.Component{
     this.state = {
       visible: false,
       selected: 'blue',
-      theme:'dark'
+      theme:'dark',
     }
-
+  }
+  componentDidMount(){
+    console.log(this.props)
   }
   onSelect = (opt) => {
     this.setState({
@@ -31,13 +33,14 @@ export default class Header extends React.Component{
   }
   render(){
     const colorBtnSty = {height:'40px',width:'40px',fontSize:'30px',textAlign:'center',lineHeight:'40px'}
+    const username = this.props.username
     return (
       <NavBar
         mode={this.state.theme}
         icon={<span className='logoSpan'>Logo Name</span>}
         onLeftClick={() => console.log('onLeftClick')}
         rightContent={[
-          <p key='0' className='username' style={{margin:'0 10px'}}>姓名</p>,
+        <p key='0' className='username' style={{margin:'0 10px'}}>{username}</p>,
           <Popover  key='1' mask
               overlayClassName="fortest"
               overlayStyle={{ color: 'currentColor' }}
@@ -45,8 +48,6 @@ export default class Header extends React.Component{
               overlay={[
                 (<Item key="1" value="dark" icon={<div style={{height:'20px',backgroundColor:'#108ee9'}}></div>}>默认(深色)</Item>),
                 (<Item key="2" value="light" icon={<div style={{height:'20px',backgroundColor:'#fff',border:'1px solid #000'}}></div>}>白</Item>),
-                // (<Item key="3" value="black" icon={<div style={{height:'20px',backgroundColor:'#000'}}></div>}>黑</Item>),
-                // (<Item key="4" value="red" icon={<div style={{height:'20px',backgroundColor:'#720b0b'}}></div>}>红</Item>),
               ]}
               align={{
                 overflow: { adjustY: 0, adjustX: 0 },

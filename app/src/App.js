@@ -6,14 +6,16 @@ import FooterMaster from './master/FooterMaster'
 export default class App extends React.Component {
   constructor(props){
     super(props)
-    this.state = {}
+    this.state = {
+      TeacherId:''
+    }
   }
 
   render(){
     return (
       <Router>
-        <Route exact path='/' component={Login} />
-        <Route path='/index' component={FooterMaster} />
+          <Route exact path='/' component={Login} />
+          <Route path='/index/:uid' component={FooterMaster} />
       </Router>
     )
   }

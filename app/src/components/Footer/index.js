@@ -20,7 +20,6 @@ export default class Footer extends React.Component {
   render() {
     const homeSpan = <span className="iconfont icon-zhiboguanli" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
     const courseSpan = <span className="iconfont icon-book" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
-    const listSpan = <span className="iconfont icon-bofang" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
     const mySpan = <span className="iconfont  icon-gerenyonghutouxiang2" style={{ width: '22px', height: '22px', fontSize: '22px' }} />
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: 'calc(100% - 45px)', width: '100%', top: '45px' } : { height: 400 }}>
@@ -44,7 +43,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId"
           >
-            <Home />
+            <Home {...this.props} />
           </TabBar.Item>
           <TabBar.Item
             icon={courseSpan}
@@ -60,22 +59,7 @@ export default class Footer extends React.Component {
             }}
             data-seed="logId1"
           >
-            <List />
-          </TabBar.Item>
-          <TabBar.Item
-            icon={listSpan}
-            selectedIcon={listSpan}
-            title="播放列表"
-            key="List"
-            badge={''}
-            selected={this.state.selectedTab === 'ListTab'}
-            onPress={() => {
-              this.setState({
-                selectedTab: 'ListTab',
-              });
-            }}
-          >
-            {/* {this.renderContent('List')} */}播放列表
+            <List {...this.props} />
           </TabBar.Item>
           <TabBar.Item
             icon={mySpan}
@@ -89,7 +73,7 @@ export default class Footer extends React.Component {
               });
             }}
           >
-            <My />
+            <My {...this.props} />
           </TabBar.Item>
         </TabBar>
       </div>

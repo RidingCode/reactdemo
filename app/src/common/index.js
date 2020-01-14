@@ -1,7 +1,6 @@
 import { Component } from 'react'
 
 (function (owner) {
-  owner.URL = '/Ajax/Anonymous.ashx?rand=DFdg8' //local
   owner.requestData = (url, param) => {
     return {
       ApiUrl: url,
