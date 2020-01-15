@@ -4,6 +4,8 @@ import {Toast} from 'antd-mobile'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import './index.scss'
+
+const Content = React.createContext('hello')
 export default class App extends React.Component{
   constructor(props){
     super(props)
@@ -30,18 +32,17 @@ export default class App extends React.Component{
     const req = this.common.requestData(api, param)
     this.$axios.post(this.Api.COMMON_API,req)
       .then(res=>{
-        this.setState({username:res.data.RealName})
-        console.log(this.state)
+        this.setState({username:res.data.RealName,userData:res.data})
       })
       .catch(err=>console.log(err))
   }
 
   render(){
     return (
-      <div>
-        <Header {...this.props} username={this.state.username}/>
-        <Footer {...this.props}/>
-      </div>
+      <Content.Provider>
+        <Header {...this.props} username={this.state.username} />
+        <Footer {...this.props} userData={this.state.userData}/>
+      </Content.Provider>
     )
   }
 }

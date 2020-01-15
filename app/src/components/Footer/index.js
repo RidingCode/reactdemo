@@ -73,7 +73,7 @@ export default class Footer extends React.Component {
               });
             }}
           >
-            <My {...this.props} />
+            <My {...this.props} userData={this.props.userData}/>
           </TabBar.Item>
         </TabBar>
       </div>
